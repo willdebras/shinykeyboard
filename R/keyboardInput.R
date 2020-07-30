@@ -1,11 +1,12 @@
 #' @title An SVG Keyboard
 #'
-#' This input operates like a \code{shiny::radioButtons()} where you can select one of the body parts!
+#' This input operates like a \code{shiny::radioButtons()} where you can select keys to depress to simulate typing!
 #'
 #' @import shiny
 #'
-#' @param color_palette
-#' @param selected
+#' @param id Shiny input id
+#' @param color_palette the color palette to use options include:
+#' @param selected the keys selected by default
 #'
 #' @return
 #'
@@ -13,10 +14,7 @@
 #'
 #' @examples
 #' \dontrun{
-#' keyboardInput("human", data = rnorm(13, 100), low.col = "pink", high.col = "purple")
-#' }
-#' \dontrun{
-#' keyboardInput("human", color = "steelblue")
+#' keyboardInput("keebs", color_palette = "sharla1")
 #' }
 
 keyboardInput <- function(
