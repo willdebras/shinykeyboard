@@ -26,11 +26,11 @@ keyboardInput <- function(
 
   htmltools::tagList(
     htmltools::htmlDependency(
-      name    = "shinyBody",
-      version = utils::packageVersion("shinyBody"),
-      package = "shinyBody",
+      name    = "shinykeyboard",
+      version = utils::packageVersion("shinykeyboard"),
+      package = "shinykeyboard",
       src     = "js",
-      script  = "shinyBody.js",
+      script  = "shinykeyboard.js",
       stylesheet = "styles.css"
     ),
     tags$div(
