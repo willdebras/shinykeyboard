@@ -5,15 +5,13 @@ library(shinykeyboard)
 ui <- function() {
 
     fluidPage(
-            keyboardInput("keebs1", color_palette = "sharla1"),
-            keyboardInput("keebs2", color_palette = "sharla2"),
-            keyboardInput("keebs3", color_palette = "sharla3"),
-            #verbatimTextOutput("debug")
+            keyboardInput("keebs", color_palette = "sharla3"),
+            verbatimTextOutput("debug")
     )
 }
 
 server <- function(input, output) {
-    #output$debug <- renderPrint(input$keebs)
+    output$debug <- renderPrint(input$keebs)
 }
 
 shinyApp(ui = ui, server = server)
