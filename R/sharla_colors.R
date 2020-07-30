@@ -3,4 +3,3 @@ colorlist <- list(
   sharla2 = c(keyboard_color = "#E5E7EB",  modifier_color = "#155E90", alphanum_color = "#DFDED9", accent_color = "#F9B668", background_colour = "lightgrey", alphanum_stroke = "#cbc9c1", modifier_stroke = "#135582", accent_stroke = "#f8a546", text_color = "#f8a546"),
   sharla3 = c(keyboard_color = "#313131",  modifier_color = "#FF4893", alphanum_color = "#6F4CA4", accent_color = "#00A8E8", background_colour = "lightgrey", alphanum_stroke = "#644494", modifier_stroke = "#ff2d81", accent_stroke = "#0096d1", text_color = "white")
 )
-
