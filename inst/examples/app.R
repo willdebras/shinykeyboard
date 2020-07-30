@@ -1,22 +1,19 @@
-
-
-# Example of shinyBody Shiny Input
+# Example of shinykeyboard Shiny Input
 library(shiny)
-library(shinyBody)
+library(shinykeyboard)
 
 ui <- function() {
 
     fluidPage(
-            bodyInput("human",
-                      data = c(rnorm(13, 100)),
-                      low.col = "#800000",
-                      high.col = "#ffe8e8"),
+            keyboardInput("keebs",
+                          color_pallete = "sharla1",
+                          selected = c("A")),
             verbatimTextOutput("debug")
     )
 }
 
 server <- function(input, output) {
-    output$debug <- renderPrint(input$human)
+    output$debug <- renderPrint(input$keebs)
 }
 
 shinyApp(ui = ui, server = server)
