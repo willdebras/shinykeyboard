@@ -1,21 +1,32 @@
-.human-body {
+.shinykeyboard {
 position: relative;
 height: 500px;
 width: 230px;
 }
 
-.human-body svg:hover {
+.shinykeyboard svg:hover {
 cursor: pointer;
 }
 
-.human-body svg:hover path {
-fill: #FDE725FF;
+.shinykeyboard svg:hover path {
+filter: invert(30%);
 }
 
-.human-body svg {
+.shinykeyboard svg:active path {
+filter: invert(50%);
+}
+
+.shinykeyboard svg:focus path {
+filter: invert(70%);
+}
+
+
+/*
+.shinykeyboard svg {
 position: absolute;
 left: 50%;
 }
+
 
 .human-body svg#head {
 margin-left: -28.5px;
@@ -83,6 +94,8 @@ top: 457px;
 margin-left: 5.5px;
 top: 457px;
 }
+
+*/
 
 #area {
 display: block;
