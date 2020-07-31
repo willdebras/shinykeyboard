@@ -25,82 +25,10 @@ cursor: pointer;
   stroke:#FF4500 !important;
 }
 
-/*
-
-.shinykeyboard svg {
-position: absolute;
-left: 50%;
+.key.selected {
+  fill:#FF4500  !important;
+  stroke:#FF4500 !important;
 }
-
-
-.human-body svg#head {
-margin-left: -28.5px;
-top: 3px;
-}
-
-.human-body svg#left-shoulder {
-margin-left: -53.5px;
-top: 73px;
-}
-
-.human-body svg#right-shoulder {
-margin-left: 13.5px;
-top: 73px;
-}
-
-.human-body svg#left-arm {
-margin-left: -78px;
-top: 115px;
-}
-
-.human-body svg#right-arm {
-margin-left: 38px;
-top: 115px;
-}
-
-.human-body svg#chest {
-margin-left: -43.5px;
-top: 93px;
-}
-
-.human-body svg#stomach {
-margin-left: -37.5px;
-top: 133px;
-}
-
-.human-body svg#left-leg {
-margin-left: -46.5px;
-top: 207px;
-z-index: 9999;
-}
-
-.human-body svg#right-leg {
-margin-left: 1.5px;
-top: 207px;
-z-index: 9999;
-}
-
-.human-body svg#left-hand {
-margin-left: -102.5px;
-top: 226px;
-}
-
-.human-body svg#right-hand {
-margin-left: 66.5px;
-top: 226px;
-}
-
-.human-body svg#left-foot {
-margin-left: -35.5px;
-top: 457px;
-}
-
-.human-body svg#right-foot {
-margin-left: 5.5px;
-top: 457px;
-}
-
-*/
 
 #area {
 display: block;
