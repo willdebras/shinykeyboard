@@ -4,24 +4,29 @@ height: 500px;
 width: 230px;
 }
 
+svg{
+    pointer-events:all;
+}
+
+
 .shinykeyboard svg:hover {
 cursor: pointer;
 }
 
-.shinykeyboard svg:hover path {
-filter: invert(30%);
+.key:hover, .key:focus {
+  fill:#939799  !important;
+  stroke:#939799 !important;
 }
 
-.shinykeyboard svg:active path {
-filter: invert(50%);
-}
 
-.shinykeyboard svg:focus path {
-filter: invert(70%);
-}
 
+.key:active {
+  fill:#FF4500  !important;
+  stroke:#FF4500 !important;
+}
 
 /*
+
 .shinykeyboard svg {
 position: absolute;
 left: 50%;
