@@ -24,7 +24,7 @@ $.extend(shinyKeyboardBinding, {
 
       // while this records multiple keys (YAY)
       // I don't know how to store them as an array
-      let key_down = String.fromCharCode(evt.keyCode);
+      let key_down = String.fromCharCode(evt.keyCode).toLowerCase();
       console.log(key_down)
 
       // once I can return multiple
@@ -32,7 +32,8 @@ $.extend(shinyKeyboardBinding, {
       // to all elements
       // for now
       // this just returns the last key pressed, not multiple
-      $("#" + key_down.toLowerCase()).addClass('selected');
+      $("#" + key_down).addClass('selected');
+      callback();
     });
   },
   unsubscribe: function(el) {
