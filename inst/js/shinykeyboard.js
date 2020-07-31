@@ -4,14 +4,14 @@ $.extend(shinyBodyBinding, {
   // find the dom element with input$id
   // this becomes el downstream
   find: function find(scope) {
-    return $(scope).find(".human-body")
+    return $(scope).find(".shinykeyboard")
   },
 
   // get the data-anatomy of the element with class selected
   // use this as the input's value
   // SEE subscribe
   getValue: function getValue(el) {
-    var value = $(el).find('.selected').data('anatomy')
+    var value = $(el).find('.selected').attr('id')
     console.log(value)
     return value
   },
