@@ -2,10 +2,17 @@ Package: shinykeyboard
 Type: Package
 Title: A GUI Keyboard
 Version: 0.1.0
-Authors@R: person("Maya", "Gans", role = c("cre", "aut"),
-                  email = "jaffe.maya@gmail.com"),
-                  person("Will", "Bonnell", role = c("aut"), 
-                  email = "wtb3na@virginia.edu")
+Authors@R: 
+    c(
+    person(given = "Maya",
+           family = "Gans",
+           role = c("cre", "aut"),
+           email = "jaffe.maya@gmail.com"),
+    person(given = "Will",
+           family = "Bonnell",
+           role = c("aut"),
+           email = "wtb3na@virginia.edu")
+           )
 Description: An R package to create an on-screen keyboard in R Shiny
     that returns the value of key presses on screen or on a keyboard. 
 Imports:
