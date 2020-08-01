@@ -1,3 +1,12 @@
+:root {
+  --main-bg-color: #F3F3F3;
+  --toggle-color: #FFF;
+  --toggle-bg-color: #C6C6C6;
+  --toggle-bg-color-active: #03a9f4;
+  --toggle-width: 200px;
+  --toggle-height: calc(var(--toggle-width) / 2)
+}
+
 .shinykeyboard {
 position: relative;
 height: 500px;
@@ -28,15 +37,6 @@ cursor: pointer;
 .key.selected {
   fill:#FF4500  !important;
   stroke:#FF4500 !important;
-}
-
-:root {
-  --main-bg-color: #F3F3F3;
-  --toggle-color: #FFF;
-  --toggle-bg-color: #C6C6C6;
-  --toggle-bg-color-active: #03a9f4;
-  --toggle-width: 200px;
-  --toggle-height: calc(var(--toggle-width) / 2)
 }
 
 .toggle-button {
@@ -72,21 +72,3 @@ cursor: pointer;
 .toggle-button:checked:before {
   left: var(--toggle-height);
 }
-
-
-#area {
-display: block;
-width: 100%;
-clear: both;
-padding: 10px;
-text-align: center;
-font-size: 25px;
-font-family: Courier New;
-color: #a5a5a5;
-}
-
-#area #data {
-color: black;
-}
-
-.well{min-height:700px;}
