@@ -34,7 +34,12 @@ keyboardInput <- function(
   accent_stroke = colorlist[[color_palette]][["accent_stroke"]]
   text_color = colorlist[[color_palette]][["text_color"]]
 
-  keyboard_options <- list( html = HTML(glue::glue(keyboard_string)))
+  keyboard_options <- list(
+    tags$input(id=paste0(inputId, "_switch"),
+               class="toggle-button",
+               type="checkbox"),
+    html = HTML(glue::glue(keyboard_string))
+    )
 
   htmltools::tagList(
     htmltools::htmlDependency(
