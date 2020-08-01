@@ -30,6 +30,66 @@ cursor: pointer;
   stroke:#FF4500 !important;
 }
 
+:root {
+  --main-bg-color: #F3F3F3;
+  --toggle-color: #FFF;
+  --toggle-bg-color: #C6C6C6;
+  --toggle-bg-color-active: #03a9f4;
+  --toggle-width: 200px;
+  --toggle-height: calc(var(--toggle-width) / 2)
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--main-bg-color);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.toggle-button {
+  position: relative;
+  width: var(--toggle-width);
+  height: var(--toggle-height);
+  -webkit-appearance: none;
+  background-color: var(--toggle-bg-color);
+  border-radius: var(--toggle-height);
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  transition: background-color .5s;
+  cursor: pointer;
+}
+
+.toggle-button:checked {
+  background-color: var(--toggle-bg-color-active);
+}
+
+.toggle-button:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--toggle-height);
+  height: var(--toggle-height);
+  background-color: var(--toggle-color);
+  border-radius: calc(var(--toggle-height) / 2);
+  transform: scale(1.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: .5s;
+}
+
+.toggle-button:checked:before {
+  left: var(--toggle-height);
+}
+
+
 #area {
 display: block;
 width: 100%;
