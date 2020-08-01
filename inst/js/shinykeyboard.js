@@ -11,8 +11,12 @@ $.extend(shinyKeyboardBinding, {
   // use this as the input's value
   getValue: function getValue(el) {
     // return everything with selected class and get its id
-    var value = $(el).find('.selected').attr('id')
-    return value
+    var idArray = [];
+        $('.selected').each(function () {
+          idArray.push(this.id);
+        });
+    console.log(idArray)
+    return idArray
   },
 
   // on key click add "selected" class
@@ -22,7 +26,6 @@ $.extend(shinyKeyboardBinding, {
       // remove all of the selected classes inside our element
       $(el).find(".selected").removeClass("selected");
       // set the selected class to the closest clicked part
-      console.log($(evt.target).attr('id'))
       $(evt.target).addClass('selected');
       callback()
     });
@@ -33,7 +36,6 @@ $.extend(shinyKeyboardBinding, {
       // while this records multiple keys (YAY)
       // I don't know how to store them as an array
       var key = pressedKeys[evt.keyCode]
-      console.log(pressedKeys)
 
       // 2. CONVERT KEYCODE TO KEY NAME
       // eventually this needs to return from a look up table

@@ -1,27 +1,36 @@
+:root {
+  --main-bg-color: #F3F3F3;
+  --toggle-color: #FFF;
+  --toggle-bg-color: #C6C6C6;
+  --toggle-bg-color-active: #03a9f4;
+  --toggle-width: 200px;
+  --toggle-height: calc(var(--toggle-width) / 2)
+}
+
 .shinykeyboard {
-position: relative;
-height: 500px;
-width: 230px;
+  position: relative;
+  height: 500px;
+  width: 230px;
 }
 
 svg{
-    pointer-events:all;
+  pointer-events:all;
 }
 
 
 .shinykeyboard svg:hover {
-cursor: pointer;
+ cursor: pointer;
 }
 
 .key:hover, .key:focus {
-  fill:#939799  !important;
+  fill: #939799  !important;
   stroke:#939799 !important;
 }
 
 
 
 .key:active {
-  fill:#FF4500  !important;
+  fill: var(--toggle-height);
   stroke:#FF4500 !important;
 }
 
@@ -30,19 +39,36 @@ cursor: pointer;
   stroke:#FF4500 !important;
 }
 
-#area {
-display: block;
-width: 100%;
-clear: both;
-padding: 10px;
-text-align: center;
-font-size: 25px;
-font-family: Courier New;
-color: #a5a5a5;
+.toggle-button {
+  position: relative;
+  width: var(--toggle-width);
+  height: var(--toggle-height);
+  -webkit-appearance: none;
+  background-color: var(--toggle-bg-color);
+  border-radius: var(--toggle-height);
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  transition: background-color .5s;
+  cursor: pointer;
 }
 
-#area #data {
-color: black;
+.toggle-button:checked {
+  background-color: var(--toggle-bg-color-active);
 }
 
-.well{min-height:700px;}
+.toggle-button:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--toggle-height);
+  height: var(--toggle-height);
+  background-color: var(--toggle-color);
+  border-radius: calc(var(--toggle-height) / 2);
+  transform: scale(1.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: .5s;
+}
+
+.toggle-button:checked:before {
+  left: var(--toggle-height);
+}
