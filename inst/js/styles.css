@@ -8,29 +8,29 @@
 }
 
 .shinykeyboard {
-position: relative;
-height: 500px;
-width: 230px;
+  position: relative;
+  height: 500px;
+  width: 230px;
 }
 
 svg{
-    pointer-events:all;
+  pointer-events:all;
 }
 
 
 .shinykeyboard svg:hover {
-cursor: pointer;
+ cursor: pointer;
 }
 
 .key:hover, .key:focus {
-  fill:#939799  !important;
+  fill: #939799  !important;
   stroke:#939799 !important;
 }
 
 
 
 .key:active {
-  fill:#FF4500  !important;
+  fill: var(--toggle-height);
   stroke:#FF4500 !important;
 }
 
