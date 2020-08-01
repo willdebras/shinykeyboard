@@ -39,22 +39,6 @@ cursor: pointer;
   --toggle-height: calc(var(--toggle-width) / 2)
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  outline: 0;
-  box-sizing: border-box;
-}
-
-body {
-  min-height: 100vh;
-  background-color: var(--main-bg-color);
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .toggle-button {
   position: relative;
   width: var(--toggle-width);
