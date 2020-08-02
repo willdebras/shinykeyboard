@@ -15,22 +15,34 @@ $.extend(shinyKeyboardBinding, {
         $('.selected').each(function () {
           idArray.push(this.id);
         });
-    console.log(idArray)
-    return idArray
+    return idArray.filter(word => word !== $(el).attr("id"))
+                  .filter(word => word !== $(el).attr("id") + "_switch")
+                  .filter(word => word !== "");
   },
 
   // on key click add "selected" class
   // to svg path with the id of the pressed key
   subscribe: function (el, callback) {
     $(el).on("click.shinyKeyboardBinding", function (evt) {
-      // remove all of the selected classes inside our element
-      $(el).find(".selected").removeClass("selected");
-      // set the selected class to the closest clicked part
-      $(evt.target).addClass('selected');
+      // if a key is selected and clicked then remove the class
+      if ($(evt.target).hasClass("selected")) {
+        $(evt.target).removeClass("selected")
+      }
+      // if the toggle is selected let the user push new values
+      // but remove the class if they clicked on an already selected class
+      if ($("#" + $(el).attr("id") + "_switch").is(':checked')) {
+        if ($(evt.target).hasClass("selected")) {
+          $(evt.target).removeClass("selected")
+        } else {
+          $(evt.target).addClass('selected');
+        }
+      } else {
+        $(el).find(".selected").removeClass("selected");
+        $(evt.target).addClass('selected');
+      }
       callback()
     });
     $(document).keyup(function (evt) {
-
       // 1. GET KEYCODE ARRAY
       pressedKeys = [];
       // while this records multiple keys (YAY)
