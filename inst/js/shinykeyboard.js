@@ -15,6 +15,8 @@ $.extend(shinyKeyboardBinding, {
         $('.selected').each(function () {
           idArray.push(this.id);
         });
+        // returning everything but the id and switch
+        // and some random empty strings if you don't click EXACTLY the glyph
     return idArray.filter(word => word !== $(el).attr("id"))
                   .filter(word => word !== $(el).attr("id") + "_switch")
                   .filter(word => word !== "");
@@ -24,10 +26,6 @@ $.extend(shinyKeyboardBinding, {
   // to svg path with the id of the pressed key
   subscribe: function (el, callback) {
     $(el).on("click.shinyKeyboardBinding", function (evt) {
-      // if a key is selected and clicked then remove the class
-      if ($(evt.target).hasClass("selected")) {
-        $(evt.target).removeClass("selected")
-      }
       // if the toggle is selected let the user push new values
       // but remove the class if they clicked on an already selected class
       if ($("#" + $(el).attr("id") + "_switch").is(':checked')) {

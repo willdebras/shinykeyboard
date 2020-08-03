@@ -5,7 +5,7 @@ library(shinykeyboard)
 ui <- function() {
 
     fluidPage(
-            keyboardInput("keebs", color_palette = "sharla2"),
+            keyboardInput("keebs", color_palette = "sharla3"),
             br(), br(), br(),
             br(), br(), br(),
             br(), br(), br(),
