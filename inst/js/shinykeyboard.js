@@ -1,4 +1,4 @@
-let keymap = [
+let keymap = {
   backspace: 8,
   tab: 9,
   enter:	13,
@@ -11,6 +11,7 @@ let keymap = [
   pause:	19,
   caps: 20,
   esc: 27,
+  space: 32,
   pgup:	33,
   pgdn:	34,
   end:	35,
@@ -84,16 +85,16 @@ let keymap = [
   fslash: 191,
   lbrack: 219,
   rbrack: 221,
+  comma: 188,
   minus: 189,
   period: 190,
   semi: 186,
-  single: 222,
   equals: 187,
   scroll: 145,
   backtick: 192,
-  apos:222,
-  print:44
-]
+  apos: 222,
+  print: 44
+}
 
 function getKeyByValue(value) {
   return Object.keys(keymap).find(key => keymap[key] === value);
