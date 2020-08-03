@@ -313,7 +313,10 @@ keyboard_string <- "<?xml version='1.0' encoding='UTF-8'?>
 </defs>
 
 <g id='surface1'>
+<!--
 <rect x='0' y='0' width='806' height='381' style='fill:rgb(100%,100%,100%);fill-opacity:1;stroke:none;'/>
+-->
+
 <g clip-path='url(#clip1)' clip-rule='nonzero'>
 <path style='fill-rule:nonzero;fill:{background_color};fill-opacity:1;stroke-width:0.75;stroke-linecap:round;stroke-linejoin:round;stroke:rgb(98.823529%,91.372549%,81.568627%);stroke-opacity:1;stroke-miterlimit:10;' d='M 0 343.171875 L 806 343.171875 L 806 37.824219 L 0 37.824219 Z M 0 343.171875 '/>
 </g>

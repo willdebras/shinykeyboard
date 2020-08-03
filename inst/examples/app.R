@@ -6,9 +6,7 @@ ui <- function() {
 
     fluidPage(
             keyboardInput("keebs", color_palette = "sharla3"),
-            br(), br(), br(),
-            br(), br(), br(),
-            br(), br(), br(),
+            br(),
             verbatimTextOutput("debug")
     )
 }

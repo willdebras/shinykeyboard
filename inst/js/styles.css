@@ -3,7 +3,7 @@
   --toggle-color: #FFF;
   --toggle-bg-color: #C6C6C6;
   --toggle-bg-color-active: #03a9f4;
-  --toggle-width: 200px;
+  --toggle-width: 50px;
   --toggle-height: calc(var(--toggle-width) / 2)
 }
 
@@ -11,6 +11,11 @@
   position: relative;
   height: 500px;
   width: 230px;
+}
+
+.togglepos {
+
+
 }
 
 svg{
