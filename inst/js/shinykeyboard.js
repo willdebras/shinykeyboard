@@ -9,7 +9,7 @@ let keymap = [
   {'caps lock': 20},
   {escape: 27},
   {'page up':	33},
-  {page down:	34},
+  {'page down':	34},
   {end:	35},
   {home: 36},
   {'left arrow': 37},
