@@ -77,3 +77,11 @@ svg{
 .toggle-button:checked:before {
   left: var(--toggle-height);
 }
+
+.light_on {
+
+  fill:#FBFCFC !important;
+  stroke:#FCF3CF !important;
+
+}
+
