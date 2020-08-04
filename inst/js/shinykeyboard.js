@@ -140,13 +140,18 @@ $.extend(shinyKeyboardBinding, {
         $(el).find(".selected").removeClass("selected");
         $(evt.target).addClass('selected');
       }
+
+      $(el).find(".light_on").removeClass("light_on");
+
+      if ($("#caps").hasClass("selected"))  $("#light1").addClass("light_on")
+      if ($("#scroll").hasClass("selected")) $("#light2").addClass("light_on")
+      if ($("#numlock").hasClass("selected")) $("#light3").addClass("light_on")
+
       callback();
     });
     $(document).keyup(function (evt) {
       // 2. CONVERT KEYCODE TO KEY NAME
       let key_down = getKeyByValue(evt.keyCode);
-      console.log(evt.keyCode)
-      console.log(key_down)
       $("#" + key_down).addClass('selected');
       callback(true);
     });
