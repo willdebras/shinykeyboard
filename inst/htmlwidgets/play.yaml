@@ -1,0 +1,6 @@
+dependencies:
+  - name: shinykeyboard
+    version: 1.0.0
+    src: htmlwidgets
+    script: js/makeChart.js
+    stylesheet: css/styles.css
