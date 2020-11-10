@@ -43,6 +43,12 @@ play <- function(message, width = NULL, height = NULL, elementId = NULL,
   # but it doesnt
   sprintf("<div>%s</div>", keyboard_options)
 
+  # also tried here
+  # but doesnt work
+  # htmltools::div(
+  #  keyboard_options
+  # )
+
   # create widget
   htmlwidgets::createWidget(
     name = 'play',
