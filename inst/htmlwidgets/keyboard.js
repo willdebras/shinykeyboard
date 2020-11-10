@@ -1,6 +1,6 @@
 HTMLWidgets.widget({
 
-  name: 'play',
+  name: 'keyboard',
 
   type: 'output',
 
@@ -13,7 +13,7 @@ HTMLWidgets.widget({
       renderValue: function(x) {
 
         // TODO: code to render the widget, e.g.
-        el.innerText = x.message;
+        el.innerHTML = x.message;
 
       },
 

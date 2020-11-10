@@ -8,14 +8,9 @@
 #' @import htmlwidgets
 #'
 #' @export
-#' @example play()
-play <- function(message, width = NULL, height = NULL, elementId = NULL,
-                 color_palette = "sharla1", selected = NULL) {
-
-  # forward options using x
-  x = list(
-    message = message
-  )
+#' @example keyboard()
+keyboard <- function(message, width = NULL, height = NULL, elementId = NULL,
+                     color_palette = "sharla2", selected = NULL) {
 
   # subset colors based on the user selected palette
   accent_color = colorlist[[color_palette]][["accent_color"]]
@@ -29,34 +24,27 @@ play <- function(message, width = NULL, height = NULL, elementId = NULL,
   accent_stroke = colorlist[[color_palette]][["accent_stroke"]]
   text_color = colorlist[[color_palette]][["text_color"]]
 
-  # apply the colors to the svg string
-  # this outputs a radio button
-  # and the svg keyboard
-  keyboard_options <- list(
-    htmltools::tags$input(id=paste0(elementId, "_switch"),
-                          class="toggle-button",
-                          type="checkbox"),
-    html = htmltools::HTML(glue::glue(keyboard_string))
+
+  # forward options using x
+  x = list(
+    message = htmltools::HTML("<div class='container'>
+                              <input id=", elementId, "_switch' class='toggle-button' type='checkbox'/><br>",
+                              glue::glue(keyboard_string), "</div>")
   )
-
-  # this _should_ work and print the expected output
-  # but it doesnt
-  sprintf("<div>%s</div>", keyboard_options)
-
-  # also tried here
-  # but doesnt work
-  # htmltools::div(
-  #  keyboard_options
-  # )
 
   # create widget
   htmlwidgets::createWidget(
-    name = 'play',
+    name = 'keyboard',
     x,
     width = width,
     height = height,
     package = 'shinykeyboard',
-    elementId = elementId
+    elementId = elementId,
+    sizingPolicy = htmlwidgets::sizingPolicy(
+      defaultWidth = "100%",
+      padding = 0,
+      browser.fill = TRUE
+    )
   )
 
 }
